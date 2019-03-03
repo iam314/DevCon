@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+        <!-- Hammer reload -->
+          <script>
+            setInterval(function(){
+              try {
+                if(typeof ws != 'undefined' && ws.readyState == 1){return true;}
+                ws = new WebSocket('ws://'+(location.host || 'localhost').split(':')[0]+':35353')
+                ws.onopen = function(){ws.onclose = function(){document.location.reload()}}
+                window.onbeforeunload = function() { ws = null }
+                ws.onmessage = function(){
+                  var links = document.getElementsByTagName('link');
+                    for (var i = 0; i < links.length;i++) {
+                    var link = links[i];
+                    if (link.rel === 'stylesheet' && !link.href.match(/typekit/)) {
+                      href = link.href.replace(/((&|\?)hammer=)[^&]+/,'');
+                      link.href = href + (href.indexOf('?')>=0?'&':'?') + 'hammer='+(new Date().valueOf());
+                    }
+                  }
+                }
+              }catch(e){}
+            }, 1000)
+          </script>
+        <!-- /Hammer reload -->
+      
+	<meta charset="utf-8">
+	<!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+	<title>DevCon | Registration</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="DevCon">
+	<meta name="author" content="Lyudmil Dachev">
+	<!-- fonts -->
+	<link rel="stylesheet" href="https://use.typekit.net/miq1ref.css">
+	<!-- Le styles -->
+	<link href="css/normalize.css" rel="stylesheet">
+	<link href="css/main.css" rel="stylesheet">
+</head>
+
+<body class="Site">
+	<main class="Site-content">
+<section>
+  <nav class="container-fluid">
+         <div class="row">
+          <div class="col col--12-of-12">
+          	<a href="index.html" class="current-parent logo_blck"></a>
+            <span class="hamburgerblck hidedesktop" onclick="openNav()">☰</span>
+  			<ul class="topnav">
+  				<li><a class="colorblack" href="about.html">About</a></li>
+          <li><a class="colorblack" href="speakers.html">Speakers</a></li>
+          <li><a class="colorblack" href="schedule.html">Schedule</a></li>
+          <li class='current'><a class="current colorblack" href="registration.html">Registration</a></li>
+          <li><a class="colorblack" href="faq.html">FAQ</a></li>
+          <li><a class="colorblack" href="contact.html">Contact</a></li>
+  			</ul>
+      	</div>
+  	</div>
+
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+      <a href="about.html">About</a>
+      <a href="speakers.html">Speakers</a>
+      <a href="schedule.html">Schedule</a>
+      <a class='current' href="registration.html">Registration</a>
+      <a href="faq.html">FAQ</a>
+      <a href="contact.html">Contact</a>
+    </div>
+
+  </nav>
+</section>
+
+<section class="container-fluid">
+   <div class="row">
+      <div class="col col--12-of-12">
+
+          <h3>Please fill in the form to reserve your place at DevCon Skopje 2019:</h3>
+          <form id="contactform">
+  					<!-- <label for="contact-name">Name</label> -->
+  				  <input type="text" name="name" placeholder="First Name*" required="" class="First Name">
+            <!-- <label for="contact-name">Name</label> -->
+            <input type="text" name="name" placeholder="Last Name*" required="" class="last Name">
+            <!-- <label for="contact-email">email</label> -->
+  				  <input type="text" name="_replyto" placeholder="Email*" required="" class="mail">
+  					<!-- <label for="contact-phone">Phone</label> -->
+  					<input type="text" name="phone" placeholder="Phone" class="phone">
+            <input type="text" name="_gotcha" style="display:none">
+  					<button class="submit" type="submit" value="Send">Send it</button>
+    				</form>
+
+<!-- <a class="ctabutton"href="success.html">succes</a> -->
+
+    </div>
+  </div>
+</section>
+x
+
+</main>
+<footer class="container">
+		<div class="row">
+			<div class="col col--12-of-12">
+				<a href="index.html" class="current-parent footerlogo"></a>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col col--10-of-12 col col--centered">
+				<div class="footer_navigation">
+					<ul>
+						<li><a href="about.html">About</a></li>
+		        <li><a href="speakers.html">Speakers</a></li>
+		        <li><a href="schedule.html">Schedule</a></li>
+		        <li class='current'><a class='current' href="registration.html">Registration</a></li>
+		        <li><a href="faq.html">FAQ</a></li>
+		        <li><a href="contact.html">Contact</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col col--5-of-12 col--centered">
+				<div class="footer__links_wrapper">
+
+					<div>
+					<h4>Contact</h4>
+					<ul class="footer__link_list">
+						<li><a href="mailto:hiy@devcon.com" class="mail">hi@devcon.com</a></li>
+						<li><a href="tel:+359 888 884126" class="tel">+359 888 884126</a></li>
+					</ul>
+					</div>
+					<div>
+						<h4>Follow</h4>
+					<ul class="footer__link_list">
+						<li><a href="#">facebook</a></li>
+						<li><a href="#">instagram</a></li>
+						<li><a href="#">twitter</a></li>
+						<li><a href="#">linked in</a></li>
+					</ul>
+					</div>
+					<div>
+					<h4>Legal</h4>
+					<ul class="footer__link_list">
+						<li><a href="privacy.html">Privacy Policy</a></li>
+						<li><a href="tac.html">TAC</a></li>
+					</ul>
+					</div>
+
+			</div>
+		</div>
+		<div class="row">
+			<div class="col col--12-of-12">
+				<p class="copyright">© copyright 2019 DevCon</p>
+			</div>
+		</div>
+</footer>
+<!-- Photo by Lucas Benjamin on Unsplash -->
+<script type="text/javascript">
+/* Set the width of the side navigation to 250px and the left margin of the page content to 250px */
+function openNav() {
+    document.getElementById("mySidenav").style.width = "100%";
+    document.getElementById("main").style.marginLeft = "100px";
+}
+
+/* Set the width of the side navigation to 0 and the left margin of the page content to 0 */
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("main").style.marginLeft = "0";
+}
+</script>
+</body>
+</html>
