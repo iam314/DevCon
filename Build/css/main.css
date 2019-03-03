@@ -755,6 +755,7 @@ textarea:focus, input:focus, select:focus {
   text-decoration: none;
   color: #FCFCFC;
   display: block;
+  text-align: center;
   transition: 0.3s; }
 
 /* When you mouse over the navigation links, change their color */
