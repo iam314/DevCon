@@ -361,6 +361,9 @@ section {
   background-size: cover;
   height: 100vh; }
 
+nav {
+  margin-bottom: 13%; }
+
 .topnav {
   display: flex;
   justify-content: space-around; }
@@ -407,7 +410,7 @@ nav li.current a {
 
 .devconlogo {
   display: flex;
-  margin: 13% auto 0 auto;
+  margin: 0 auto 0 auto;
   height: 14em;
   width: 18em; }
 
@@ -505,7 +508,6 @@ ul.logos {
   justify-content: space-around; }
 
 ul.speakers {
-  margin-top: 14em;
   padding-left: 0;
   list-style: none; }
 
@@ -536,7 +538,7 @@ ul.qa {
 ul.program {
   list-style: none;
   padding: 0;
-  margin: 14em auto 0 auto;
+  margin: 0 auto 0 auto;
   text-align: center; }
 
 h1 {
@@ -619,8 +621,6 @@ p {
   margin-bottom: 1.2em; }
 
 .textwrapper {
-  margin-top: 13%;
-  margin-bottom: 12em;
   padding: 0 3.6em;
   border-left: 7.2em solid #FF8C8C;
   max-width: 65em;
@@ -774,10 +774,13 @@ textarea:focus, input:focus, select:focus {
     padding-bottom: 7.2em; } }
 @media screen and (max-width: 1920px) {
   .devconlogo {
-    margin: 10% auto 0 auto; } }
+    margin: 0 auto 0 auto; } }
 @media screen and (max-width: 1440px) {
+  .nav {
+    margin-bottom: 8%; }
+
   .devconlogo {
-    margin: 8% auto 0 auto; }
+    margin: 0 auto 0 auto; }
 
   .subtext {
     font-size: 2.1em; }
@@ -792,8 +795,11 @@ textarea:focus, input:focus, select:focus {
   h2 {
     font-size: 2.6em; } }
 @media screen and (max-width: 1366px), screen and (max-height: 768px) {
+  .nav {
+    margin-bottom: 6%; }
+
   .devconlogo {
-    margin: 6% auto 0 auto; }
+    margin: 0 auto 0 auto; }
 
   h1 {
     font-size: 5.5em; }
