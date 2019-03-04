@@ -199,14 +199,24 @@ ul.footer__link_list {
 }
 
 ul.logos {
-padding-left: 0;
-list-style: none;
-margin-top: 9em;
+  padding-left: 0;
+  list-style: none;
+  margin-top: 9em;
 }
+
+ul.logos li {
+  margin-right: 5em;
+}
+
+ul.logos li:last-child {
+  margin-right: 0;
+}
+
 .logos {
-display: flex;
-justify-content: space-around;
+  display: flex;
+  justify-content: space-around;
 }
+
 
 ul.speakers {
   padding-left: 0;

@@ -503,6 +503,12 @@ ul.logos {
   list-style: none;
   margin-top: 9em; }
 
+ul.logos li {
+  margin-right: 5em; }
+
+ul.logos li:last-child {
+  margin-right: 0; }
+
 .logos {
   display: flex;
   justify-content: space-around; }
