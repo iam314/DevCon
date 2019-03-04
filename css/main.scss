@@ -520,7 +520,7 @@ background-color: darken( $color-red, 20%);
   }
 
   @media screen and (max-width: 1440px) {
-    .nav {
+    nav {
       margin-bottom: 8%;
     }
     .devconlogo {
@@ -543,7 +543,7 @@ background-color: darken( $color-red, 20%);
   }
 
 @media screen and (max-width: 1366px) , screen and (max-height: 768px) {
-  .nav {
+  nav {
     margin-bottom: 6%;
   }
   .devconlogo {

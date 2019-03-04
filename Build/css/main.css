@@ -776,7 +776,7 @@ textarea:focus, input:focus, select:focus {
   .devconlogo {
     margin: 0 auto 0 auto; } }
 @media screen and (max-width: 1440px) {
-  .nav {
+  nav {
     margin-bottom: 8%; }
 
   .devconlogo {
@@ -795,7 +795,7 @@ textarea:focus, input:focus, select:focus {
   h2 {
     font-size: 2.6em; } }
 @media screen and (max-width: 1366px), screen and (max-height: 768px) {
-  .nav {
+  nav {
     margin-bottom: 6%; }
 
   .devconlogo {
