@@ -876,7 +876,10 @@ textarea:focus, input:focus, select:focus {
     border-right: 6em solid #028BD2; }
 
   .rightphone {
-    border-right: 6em solid #028BD2; } }
+    border-right: 6em solid #028BD2; }
+
+  .formbackgroud {
+    padding: 1em 6em 4.8em 6em; } }
 @media screen and (max-width: 890px) {
   nav ul li a {
     font-size: 1.8em; } }
@@ -895,7 +898,10 @@ textarea:focus, input:focus, select:focus {
     border-right: 4.8em solid #028BD2; }
 
   .rightphone {
-    border-right: 4.8em solid #028BD2; } }
+    border-right: 4.8em solid #028BD2; }
+
+  .formbackgroud {
+    padding: 1em 4.8em 3.6em 4.8em; } }
 @media screen and (max-width: 660px) {
   .logo {
     height: 2.5em;
@@ -915,7 +921,10 @@ textarea:focus, input:focus, select:focus {
     border-right: 2em solid #028BD2; }
 
   .rightphone {
-    border-right: 2em solid #028BD2; } }
+    border-right: 2em solid #028BD2; }
+
+  .formbackgroud {
+    padding: 1em 2em 3.6em 2em; } }
 @media screen and (max-width: 500px) {
   .textwrapper > p {
     font-size: 1.6em; } }
