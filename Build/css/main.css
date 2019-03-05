@@ -675,9 +675,15 @@ p {
   margin-left: auto;
   margin-right: auto; }
 
+.formbackgroud {
+  background-color: #FF8C8C;
+  max-width: 60em;
+  padding: 7.2em;
+  margin: 0 auto; }
+
 form {
   box-sizing: border-box;
-  margin: 0 auto 96px auto;
+  margin: 0 auto 0 auto;
   max-width: 510px; }
 
 input, textarea, select {
@@ -685,7 +691,6 @@ input, textarea, select {
   font-weight: 400;
   background-color: #ffffff;
   border: none;
-  border-bottom: 4px solid #002026;
   border-radius: 0;
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
