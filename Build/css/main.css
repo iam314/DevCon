@@ -642,9 +642,8 @@ p {
   max-width: 35em;
   padding: 0 1em; }
 
-.info {
-  margin-top: 15em;
-  max-width: 35em; }
+.language {
+  font-size: 1.6em; }
 
 .copyright {
   font-family: aktiv-grotesk, sans-serif;
@@ -815,9 +814,6 @@ textarea:focus, input:focus, select:focus {
   .poster_bg {
     height: auto;
     padding-bottom: 7.2em; } }
-@media screen and (max-width: 1920px) {
-  .devconlogo {
-    margin: 0 auto 0 auto; } }
 @media screen and (max-width: 1440px) {
   nav {
     margin-bottom: 8%; }
@@ -840,9 +836,6 @@ textarea:focus, input:focus, select:focus {
 @media screen and (max-width: 1366px), screen and (max-height: 768px) {
   nav {
     margin-bottom: 6%; }
-
-  .devconlogo {
-    margin: 0 auto 0 auto; }
 
   h1 {
     font-size: 5.5em; }
@@ -887,6 +880,10 @@ textarea:focus, input:focus, select:focus {
   .footer_navigation {
     display: none; }
 
+  .devconlogo {
+    height: 10em;
+    width: 14em; }
+
   .textwrapper {
     padding: 0 2.1em;
     border-left: 4.8em solid #FF8C8C; }
@@ -924,10 +921,55 @@ textarea:focus, input:focus, select:focus {
     border-right: 2em solid #028BD2; }
 
   .formbackgroud {
-    padding: 1em 2em 3.6em 2em; } }
+    padding: 1em 2em 3.6em 2em; }
+
+  .bio > p {
+    font-size: 1.8em; }
+
+  .bio > h3 {
+    font-size: 2.6em; }
+
+  .program h3 {
+    font-size: 2.6em; }
+
+  .program p {
+    font-size: 1.8em; }
+
+  ul.program li a {
+    font-size: 1.6em; }
+
+  ul.program li {
+    margin-bottom: 3.6em; }
+
+  ul.speakers li {
+    margin-bottom: 6em; } }
 @media screen and (max-width: 500px) {
   .textwrapper > p {
-    font-size: 1.6em; } }
+    font-size: 1.6em; }
+
+  .bio > p {
+    font-size: 1.6em; }
+
+  .bio > h3 {
+    font-size: 2.4em; }
+
+  .program h3 {
+    font-size: 2.4em; }
+
+  .program p {
+    font-size: 1.6em; }
+
+  ul.program li a {
+    font-size: 1.4em; }
+
+  ul.program li {
+    margin-bottom: 2.8em; }
+
+  ul.speakers li {
+    margin-bottom: 5.5em; } }
+@media screen and (max-width: 400px) {
+  ul.speakers li {
+    margin-bottom: 4.8em; } }
 @media screen and (max-width: 319px) {
   .footer__links_wrapper {
     display: block; }
