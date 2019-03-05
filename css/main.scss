@@ -264,6 +264,10 @@ ul.qa {
   // margin-top: 13%;
 }
 
+ul.qa li {
+  margin-bottom: 6em;
+}
+
 ul.program {
   list-style: none;
   padding: 0;
@@ -609,7 +613,6 @@ background-color: darken( $color-red, 20%);
     .subtext {
       font-size: 1.8em;
     }
-
   }
 @media screen and (max-width: 900px) {
   .topnav  {
@@ -703,6 +706,7 @@ background-color: darken( $color-red, 20%);
   }
   .bio > h3 {
     font-size: 2.6em;
+    margin-top: .8em;
   }
   .program h3 {
     font-size: 2.6em;
@@ -718,6 +722,15 @@ background-color: darken( $color-red, 20%);
   }
   ul.speakers li {
   margin-bottom: 6em;
+  }
+  ul.qa li {
+    margin-bottom: 4.8em;
+  }
+  ul.qa h3 {
+    font-size: 2.6em;
+  }
+  ul.qa p {
+    font-size: 1.8em;
   }
 }
 
@@ -745,6 +758,13 @@ background-color: darken( $color-red, 20%);
   }
   ul.speakers li {
   margin-bottom: 5.5em;
+  }
+
+  ul.qa h3 {
+    font-size: 2.4em;
+  }
+  ul.qa p {
+    font-size: 1.6em;
   }
 }
 
