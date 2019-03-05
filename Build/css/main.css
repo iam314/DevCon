@@ -495,6 +495,9 @@ ul.footer__link_list {
   color: #FF8C8C;
   text-decoration: none; }
 
+.lnklistspace {
+  margin-right: 1.4em; }
+
 .footer__link_list li a:hover {
   border-bottom: 1px solid #FF8C8C; }
 
@@ -520,6 +523,9 @@ ul.speakers {
 ul.speakers li {
   margin-bottom: 9em; }
 
+ul.speakers p {
+  margin-bottom: 1em; }
+
 .spacing {
   margin-top: 2.1em; }
 
@@ -527,11 +533,14 @@ ul.speakers li {
   box-sizing: border-box; }
 
 .left {
-  border-left: 7.2rem solid #FF8C8C; }
+  border-left: 7.2em solid #FF8C8C; }
 
 .right {
-  border-right: 7.2rem solid #028BD2;
+  border-right: 7.2em solid #028BD2;
   float: right; }
+
+.rightphone {
+  border-right: 7.2em solid #028BD2; }
 
 .bio {
   margin: 0 auto;
@@ -853,7 +862,16 @@ textarea:focus, input:focus, select:focus {
 
   .textwrapper {
     padding: 0 2.8em;
-    border-left: 6em solid #FF8C8C; } }
+    border-left: 6em solid #FF8C8C; }
+
+  .left {
+    border-left: 6em solid #FF8C8C; }
+
+  .right {
+    border-right: 6em solid #028BD2; }
+
+  .rightphone {
+    border-right: 6em solid #028BD2; } }
 @media screen and (max-width: 890px) {
   nav ul li a {
     font-size: 1.8em; } }
@@ -863,7 +881,16 @@ textarea:focus, input:focus, select:focus {
 
   .textwrapper {
     padding: 0 2.1em;
-    border-left: 4.8em solid #FF8C8C; } }
+    border-left: 4.8em solid #FF8C8C; }
+
+  .left {
+    border-left: 4.8em solid #FF8C8C; }
+
+  .right {
+    border-right: 4.8em solid #028BD2; }
+
+  .rightphone {
+    border-right: 4.8em solid #028BD2; } }
 @media screen and (max-width: 660px) {
   .logo {
     height: 2.5em;
@@ -874,11 +901,22 @@ textarea:focus, input:focus, select:focus {
     border-left: 2em solid #FF8C8C; }
 
   .textwrapper > p {
-    font-size: 1.8em; } }
-@media screen and (max-width: 500px) {
-  .textwrapper {
-    padding: 0 .8em;
-    border-left: .5em solid #FF8C8C; }
+    font-size: 1.8em; }
 
+  .left {
+    border-left: 2em solid #FF8C8C; }
+
+  .right {
+    border-right: 2em solid #028BD2; }
+
+  .rightphone {
+    border-right: 2em solid #028BD2; } }
+@media screen and (max-width: 500px) {
   .textwrapper > p {
     font-size: 1.6em; } }
+@media screen and (max-width: 319px) {
+  .footer__links_wrapper {
+    display: block; }
+
+  .footer__links_wrapper {
+    text-align: center; } }
