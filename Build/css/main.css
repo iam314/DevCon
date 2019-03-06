@@ -577,6 +577,23 @@ ul.program li a {
 ul.program li a:hover {
   text-decoration: underline; }
 
+ul.contact__link_list {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto 0 auto;
+  margin-bottom: 3.6em; }
+
+.contact__link_list a {
+  font-family: aktiv-grotesk, sans-serif;
+  font-weight: 500;
+  font-size: 1.8em;
+  line-height: 160%;
+  color: #FF8C8C;
+  text-decoration: none; }
+
+.contact__link_list a:hover {
+  border-bottom: 1px solid #FF8C8C; }
+
 h1 {
   font-family: aktiv-grotesk, sans-serif;
   font-weight: 700;
