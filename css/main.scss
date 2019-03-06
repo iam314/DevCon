@@ -192,6 +192,7 @@ ul.footer__link_list {
 	color: $color-red;
   text-decoration: none;
 }
+
 .lnklistspace {
   margin-right: 1.4em;
 }
@@ -607,6 +608,13 @@ background-color: darken( $color-red, 20%);
     }
   }
 
+  // @media screen and (min-width: 1382px) , screen and (max-height: 670px) {
+  //   .poster_bg {
+  //     height: auto;
+  //     padding-bottom: 7.2em;
+  //   }
+  // }
+
 @media screen and (max-width: 1366px) , screen and (max-height: 768px) {
     nav {
       margin-bottom: 6%;
@@ -669,9 +677,6 @@ background-color: darken( $color-red, 20%);
 }
 
 @media screen and (max-width: 770px) {
-	.footer_navigation {
-		display: none;
-	}
   .devconlogo{
     height: 10em;
     width: 14em;
@@ -695,6 +700,9 @@ background-color: darken( $color-red, 20%);
 }
 
 @media screen and (max-width: 660px) {
+  .footer_navigation {
+    display: none;
+  }
 	.logo {
 		height: 2.5em;
 		width: 26em;

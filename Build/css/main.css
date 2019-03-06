@@ -896,9 +896,6 @@ textarea:focus, input:focus, select:focus {
   nav ul li a {
     font-size: 1.8em; } }
 @media screen and (max-width: 770px) {
-  .footer_navigation {
-    display: none; }
-
   .devconlogo {
     height: 10em;
     width: 14em; }
@@ -919,6 +916,9 @@ textarea:focus, input:focus, select:focus {
   .formbackgroud {
     padding: 1em 4.8em 3.6em 4.8em; } }
 @media screen and (max-width: 660px) {
+  .footer_navigation {
+    display: none; }
+
   .logo {
     height: 2.5em;
     width: 26em; }
