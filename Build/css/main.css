@@ -753,6 +753,10 @@ textarea:focus, input:focus, select:focus {
 .submit:hover {
   background-color: #ff2626; }
 
+.gmap_canvas {
+  box-sizing: border-box;
+  border-left: 7.2em solid #FF8C8C; }
+
 /* The side navigation menu */
 .hidedesktop {
   display: none; }
@@ -890,6 +894,9 @@ textarea:focus, input:focus, select:focus {
   .formbackgroud {
     padding: 1em 6em 4.8em 6em; }
 
+  .gmap_canvas {
+    border-left: 6em solid #FF8C8C; }
+
   footer {
     margin-top: 14%; } }
 @media screen and (max-width: 890px) {
@@ -914,7 +921,10 @@ textarea:focus, input:focus, select:focus {
     border-right: 4.8em solid #028BD2; }
 
   .formbackgroud {
-    padding: 1em 4.8em 3.6em 4.8em; } }
+    padding: 1em 4.8em 3.6em 4.8em; }
+
+  .gmap_canvas {
+    border-left: 4.8em solid #FF8C8C; } }
 @media screen and (max-width: 660px) {
   .footer_navigation {
     display: none; }
@@ -941,6 +951,9 @@ textarea:focus, input:focus, select:focus {
 
   .formbackgroud {
     padding: 1em 2em 3.6em 2em; }
+
+  .gmap_canvas {
+    border-left: 2em solid #FF8C8C; }
 
   .bio > p {
     font-size: 1.8em; }
@@ -1005,7 +1018,7 @@ textarea:focus, input:focus, select:focus {
 @media screen and (max-width: 400px) {
   ul.speakers li {
     margin-bottom: 4.8em; } }
-@media screen and (max-width: 319px) {
+@media screen and (max-width: 375px) {
   .footer__links_wrapper {
     display: block; }
 

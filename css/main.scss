@@ -381,11 +381,6 @@ p {
   padding: 0 1em;
 }
 
-// .info {
-// 	margin-top: 15em;
-// 	max-width: 35em;
-// }
-
 .language {
   font-size: 1.6em;
 }
@@ -502,6 +497,11 @@ textarea:focus, input:focus, select:focus {
 
 .submit:hover {
 background-color: darken( $color-red, 20%);
+}
+
+.gmap_canvas {
+  box-sizing: border-box;
+  border-left: 7.2em solid $color-red;
 }
 
   /* The side navigation menu */
@@ -665,6 +665,9 @@ background-color: darken( $color-red, 20%);
   .formbackgroud {
     padding: 1em 6em 4.8em 6em;
   }
+  .gmap_canvas {
+    border-left: 6em solid $color-red;
+  }
   footer {
   	margin-top: 14%;
   }
@@ -697,6 +700,9 @@ background-color: darken( $color-red, 20%);
   .formbackgroud {
     padding: 1em 4.8em 3.6em 4.8em;
   }
+  .gmap_canvas {
+    border-left: 4.8em solid $color-red;
+  }
 }
 
 @media screen and (max-width: 660px) {
@@ -725,6 +731,9 @@ background-color: darken( $color-red, 20%);
   }
   .formbackgroud {
     padding: 1em 2em 3.6em 2em;
+  }
+  .gmap_canvas {
+    border-left: 2em solid $color-red;
   }
   .bio > p {
     font-size: 1.8em;
@@ -798,7 +807,7 @@ background-color: darken( $color-red, 20%);
   margin-bottom: 4.8em;
   }
 }
-@media screen and (max-width: 319px) {
+@media screen and (max-width: 375px) {
   .footer__links_wrapper {
     display: block
   }
