@@ -291,10 +291,13 @@ ul.program li > h3, p {
 ul.program li  a {
   display: inline-block;
   color: $color-red;
-  font-family: courier-prime, monospace;;
+  font-family: courier-prime, monospace;
+  font-weight: 400;
+  font-style: normal;
   font-size: 1.8em;
   text-decoration: none;
 }
+
 ul.program li  a:hover {
   text-decoration: underline;
 }
@@ -335,8 +338,9 @@ h1 {
 }
 
 h2 {
-  font-family: courier-prime, monospace;;
+  font-family: courier-prime, monospace;
   font-weight: 400;
+  font-style: normal;
   font-size: 2.8em;
   line-height: 125%;
 	margin-top: 1.2em;
@@ -367,7 +371,9 @@ h4 {
 }
 
 p {
-  font-family: courier-prime, monospace;;
+  font-family: courier-prime, monospace;
+  font-weight: 400;
+  font-style: normal;
   font-size: 2.1em;
 	line-height: 150%;
 	color: $color-black;
@@ -456,8 +462,9 @@ form {
 }
 
 input, textarea, select {
-  font-family: courier-prime, monospace;;
+  font-family: courier-prime, monospace;
   font-weight: 400;
+  font-style: normal;
   background-color: #ffffff;
   border: none;
   // border-bottom: 4px solid $color-black;
