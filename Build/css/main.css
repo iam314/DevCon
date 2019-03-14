@@ -570,7 +570,7 @@ ul.program li > h3, p {
 ul.program li a {
   display: inline-block;
   color: #FF8C8C;
-  font-family: courier, sans-serif;
+  font-family: courier-prime, monospace;
   font-size: 1.8em;
   text-decoration: none; }
 
@@ -606,7 +606,7 @@ h1 {
   margin-bottom: .5em; }
 
 h2 {
-  font-family: courier, sans-serif;
+  font-family: courier-prime, monospace;
   font-weight: 400;
   font-size: 2.8em;
   line-height: 125%;
@@ -635,7 +635,7 @@ h4 {
   color: #002026; }
 
 p {
-  font-family: courier, sans-serif;
+  font-family: courier-prime, monospace;
   font-size: 2.1em;
   line-height: 150%;
   color: #002026;
@@ -710,7 +710,7 @@ form {
   margin: 0 auto 0 auto; }
 
 input, textarea, select {
-  font-family: courier, sans-serif;
+  font-family: courier-prime, monospace;
   font-weight: 400;
   background-color: #ffffff;
   border: none;
