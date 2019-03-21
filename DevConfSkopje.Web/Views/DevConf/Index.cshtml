@@ -1,0 +1,74 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section class="poster_bg">
+    <nav class="container-fluid">
+        <div class="row">
+            <div class="col col--12-of-12">
+                <a href="~/DevConf/" class="current logo"></a>
+                <span class="hamburger hidedesktop" onclick="openNav()">☰</span>
+                <ul class="topnav">
+                    <li>@Html.ActionLink("About", "About", "DevConf", null, null)</li>
+                    <li>@Html.ActionLink("Speakers", "Speakers", "DevConf", null, null)</li>
+                    <li>@Html.ActionLink("Schedule", "Schedule", "DevConf", null, null)</li>
+                    <li>@Html.ActionLink("Registration", "Registration", "DevConf", null, null)</li>
+                    <li>@Html.ActionLink("FAQ", "Faq", "DevConf", null, null)</li>
+                    <li>@Html.ActionLink("Contact", "Contact", "DevConf", null, null)</li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+            @Html.ActionLink("About", "About", "DevConf", null, new { @class = "colorblack" })
+            @Html.ActionLink("Speakers", "Speakers", "DevConf", null, new { @class = "colorblack" })
+            @Html.ActionLink("Schedule", "Schedule", "DevConf", null, new { @class = "colorblack" })
+            @Html.ActionLink("Registration", "Registration", "DevConf", null, new { @class = "colorblack" })
+            @Html.ActionLink("FAQ", "Faq", "DevConf", null, new { @class = "colorblack" })
+            @Html.ActionLink("Contact", "Contact", "DevConf", null, new { @class = "colorblack" })
+        </div>
+
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col col--12-of-12">
+                <img class="devconlogo" src="~/Content/images/devcon_logo.png" alt="Devcon logo">
+                <h2 class="white center">May 11th, 2019 at City Hall<br>Skopje, Macedonia</h2>
+                <h1 class="white center">Meet the faces behind the code</h1>
+                <p class="white center subtext">Web and mobile community in-depth talks and hands-on workshops enhancing the coding craft.</p>
+                @Html.ActionLink("Register", "Registration", "DevConf",null, new { @class= "ctabutton" })
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="container-fluid">
+    <div class="row">
+        <h3 class="center uppercase spacing">Partners</h3>
+        <ul class="logos">
+            <div class="col col--3-of-12 col col--m-2-of-4  col col--s-1-of-2">
+                <li>
+                    <img src="~/Content/images/partnerlogos/1.png" class="img-responsive" style="max-height:123px;" alt="">
+                </li>
+            </div>
+            <div class="col col--3-of-12 col col--m-2-of-4  col col--s-1-of-2">
+                <li>
+                    <img src="~/Content/images/partnerlogos/2.png" class="img-responsive" style="max-height:138px;" alt="">
+                </li>
+            </div>
+            <div class="col col--3-of-12 col col--m-2-of-4  col col--s-1-of-2">
+                <li>
+                    <img src="~/Content/images/partnerlogos/1.png" class="img-responsive" style="max-height:138px;" alt="">
+                </li>
+            </div>
+            <div class="col col--3-of-12 col col--m-2-of-4  col col--s-1-of-2">
+                <li>
+                    <img src="~/Content/images/partnerlogos/2.png" class="img-responsive" style="max-height:138px;" alt="">
+                </li>
+            </div>
+        </ul>
+    </div>
+</section>

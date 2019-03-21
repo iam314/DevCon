@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="~/Content/images/favicon.ico">
+    <!-- fonts -->
+    <link rel="stylesheet" href="https://use.typekit.net/miq1ref.css">
+
+    <title>DevCon | @ViewBag.Title </title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+</head>
+<body class="Site">
+    <main class="Site-content">
+
+        @RenderBody()
+
+        <section>
+            @Html.Partial("_Footer")
+        </section>
+    </main>
+        @Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/bootstrap")
+        @RenderSection("scripts", required: false)
+
+        <script type="text/javascript">
+
+            /* Set the width of the side navigation to 250px and the left margin of the page content to 250px */
+            function openNav() {
+                document.getElementById("mySidenav").style.width = "100%";
+                document.getElementById("main").style.marginLeft = "100px";
+            }
+
+            /* Set the width of the side navigation to 0 and the left margin of the page content to 0 */
+
+            function closeNav() {
+                document.getElementById("mySidenav").style.width = "0";
+                document.getElementById("main").style.marginLeft = "0";
+            }
+        </script>
+</body>
+</html>

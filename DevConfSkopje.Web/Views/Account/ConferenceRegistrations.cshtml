@@ -1,0 +1,54 @@
+﻿@model DevConfSkopje.Web.Models.Conference.ConferenceRegistrationsViewModel
+
+@{
+    ViewBag.Title = "ConferenceRegistrations";
+    Layout = "~/Views/Shared/_Layout3.cshtml";
+}
+
+<br />
+<br />
+<br />
+
+<h2>Conference registrations</h2>
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <div>
+                @Html.ActionLink("Export","ExportRegistrations","Account",null,new { @class="btn btn-success pull-right"})
+            </div>
+            <br />
+            <div class="scroll-in-mobile-container">
+                <div class="scroller">
+                    <table class="table fixed-layout">
+                        <thead class="thead">
+                            <tr>
+                                <th>First name</th>
+                                <th>Last name</th>
+                                <th>Email</th>
+                                <th>Phone</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @for (int i = 0; i < Model.ConferenceRegistrations.Count; i++)
+                            {
+                                <tr>
+                                    <td>@Model.ConferenceRegistrations[i].FirstName</td>
+                                    <td>@Model.ConferenceRegistrations[i].LastName</td>
+                                    <td>@Model.ConferenceRegistrations[i].Email</td>
+                                    <td>@Model.ConferenceRegistrations[i].PhoneNumber</td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            @if (Model.ConferenceRegistrations.Count == 0)
+            {
+                <div>No results found!</div>
+            }
+        </div>
+    </div>
+</div>
+
+
