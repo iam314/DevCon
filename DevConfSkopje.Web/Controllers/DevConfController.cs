@@ -3,9 +3,6 @@ using DevConfSkopje.DataModels;
 using System.Web.Mvc;
 using System.Linq;
 using CaptchaMvc.HtmlHelpers;
-using DevConfSkopje.Services.Contracts;
-using System.IO;
-using DevConfSkopje.Services;
 
 namespace DevConfSkopje.Web.Controllers
 {

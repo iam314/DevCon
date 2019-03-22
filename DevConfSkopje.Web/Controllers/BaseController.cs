@@ -2,7 +2,6 @@
 using System.Web.Mvc;
 using DevConfSkopje.Data;
 using DevConfSkopje.Data.Repository;
-using DevConfSkopje.DataModels;
 using Microsoft.AspNet.Identity.Owin;
 
 namespace DevConfSkopje.Web.Controllers
@@ -11,7 +10,9 @@ namespace DevConfSkopje.Web.Controllers
     {
         protected ApplicationSignInManager _signInManager;
         protected ApplicationUserManager _userManager;
-        protected RegistrationsRepository _registrationsRepo = new RegistrationsRepository(new DevConfDbContext());
+        protected RegistrationsRepository _registrationsRepo 
+            = new RegistrationsRepository(new DevConfDbContext());
+
         protected ApplicationSignInManager SignInManager
         {
             get
