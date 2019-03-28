@@ -1,5 +1,6 @@
 ﻿@model DevConfSkopje.Web.Models.Conference.ConferenceRegistrationViewModel
 @using CaptchaMvc.HtmlHelpers
+@using CaptchaMvc.Models
 
 @{
     ViewBag.Title = "Registration";
@@ -47,8 +48,7 @@
                 <div class="form-group">
                     <label class="col-md-2 control-label">Captcha</label>
                     <div class="col-md-10">
-                        @Html.Captcha(5)
-                        <p class="text-secondary">@ViewBag.ErrorCaptcha</p>
+                        @Html.Captcha("","Enter captcha",5)<p class="text-secondary">@ViewBag.ErrorCaptcha</p>
                     </div>
                 </div>
 

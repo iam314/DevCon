@@ -2,12 +2,14 @@
 using System.Web.Mvc;
 using DevConfSkopje.Data;
 using DevConfSkopje.Data.Repository;
+using DevConfSkopje.Services.Contracts;
 using Microsoft.AspNet.Identity.Owin;
 
 namespace DevConfSkopje.Web.Controllers
 {
     public class BaseController : Controller
     {
+        protected IEmailService _emailService;
         protected ApplicationSignInManager _signInManager;
         protected ApplicationUserManager _userManager;
         protected RegistrationsRepository _registrationsRepo 

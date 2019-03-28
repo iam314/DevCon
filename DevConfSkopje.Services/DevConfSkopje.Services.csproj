@@ -52,6 +52,7 @@
     <Compile Include="Contracts\IExportRegistrationsService.cs" />
     <Compile Include="EmailService.cs" />
     <Compile Include="ExportRegistrationsService.cs" />
+    <Compile Include="Helpers\ConfigurationSettings.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

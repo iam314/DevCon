@@ -3,6 +3,8 @@ using DevConfSkopje.DataModels;
 using System.Web.Mvc;
 using System.Linq;
 using CaptchaMvc.HtmlHelpers;
+using EmailServiceConf = DevConfSkopje.Services.EmailService;
+using System;
 
 namespace DevConfSkopje.Web.Controllers
 {
@@ -30,8 +32,18 @@ namespace DevConfSkopje.Web.Controllers
                 return View("Registration", model);
             }
 
+            _emailService = new EmailServiceConf();
             _registrationsRepo.AddNewRegistration(MapConfViewModelToDomainObj(model));
             _registrationsRepo.SaveDBChanges();
+
+            try
+            {
+                _emailService.SendCorfimation(model.Email);
+            }
+            catch(Exception)
+            {
+                return RedirectToRoute("GlobalError");
+            }
 
             return RedirectToRoute("RegSuccess");
         }
