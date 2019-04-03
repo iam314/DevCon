@@ -727,7 +727,9 @@ p {
 
 .innerlinks {
   color: #028BD2;
-  text-decoration: none; }
+  text-decoration: none;
+  display: block;
+  overflow: hidden; }
 
 .innerlinks:hover, .innerlinks:active {
   text-decoration: underline; }

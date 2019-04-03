@@ -475,6 +475,8 @@ p {
 .innerlinks {
   color: $color-blue;
   text-decoration: none;
+  display: block;
+  overflow: hidden;
 }
 .innerlinks:hover, .innerlinks:active {
   text-decoration: underline;
