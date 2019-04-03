@@ -661,6 +661,16 @@ h4 {
   margin-bottom: 0;
   color: #002026; }
 
+h5 {
+  font-family: aktiv-grotesk, sans-serif;
+  font-weight: 700;
+  font-variant: normal;
+  font-size: 4.8em;
+  line-height: 125%;
+  color: #002026;
+  margin-top: 0;
+  margin-bottom: 1.2em; }
+
 p {
   font-family: courier-prime, monospace;
   font-weight: 400;
@@ -714,6 +724,13 @@ p {
 
 .textwrapper p {
   margin-bottom: 1em; }
+
+.innerlinks {
+  color: #028BD2;
+  text-decoration: none; }
+
+.innerlinks:hover, .innerlinks:active {
+  text-decoration: underline; }
 
 .img-responsive {
   display: block;

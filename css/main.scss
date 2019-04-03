@@ -397,6 +397,17 @@ h4 {
   color: $color-black;
 }
 
+h5 {
+  font-family: aktiv-grotesk, sans-serif;
+  font-weight: 700;
+  font-variant: normal;
+  font-size: 4.8em;
+  line-height: 125%;
+	color:$color-black;
+  margin-top: 0;
+  margin-bottom: 1.2em;
+}
+
 p {
   font-family: courier-prime, monospace;
   font-weight: 400;
@@ -459,6 +470,14 @@ p {
 }
 .textwrapper p {
   margin-bottom: 1em;
+}
+
+.innerlinks {
+  color: $color-blue;
+  text-decoration: none;
+}
+.innerlinks:hover, .innerlinks:active {
+  text-decoration: underline;
 }
 
 .img-responsive {
