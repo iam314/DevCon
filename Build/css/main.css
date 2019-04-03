@@ -1033,7 +1033,10 @@ textarea:focus, input:focus, select:focus {
     font-size: 2.6em; }
 
   ul.qa p {
-    font-size: 1.8em; } }
+    font-size: 1.8em; }
+
+  h5 {
+    font-size: 3.6em; } }
 @media screen and (max-width: 500px) {
   .textwrapper > p {
     font-size: 1.6em; }
