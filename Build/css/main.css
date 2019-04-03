@@ -620,6 +620,19 @@ ul.faq__link_list li > h4 {
   margin-top: 0;
   margin-bottom: .6em; }
 
+ul.innerlist {
+  font-family: courier-prime, monospace;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.8em;
+  line-height: 150%;
+  color: #002026;
+  margin-top: 1.6em;
+  list-style: disc; }
+
+ul.innerlist li {
+  margin-bottom: 1.2em; }
+
 h1 {
   font-family: aktiv-grotesk, sans-serif;
   font-weight: 700;
@@ -727,12 +740,25 @@ p {
 
 .innerlinks {
   color: #028BD2;
-  text-decoration: none;
-  display: block;
-  overflow: hidden; }
+  text-decoration: none; }
 
 .innerlinks:hover, .innerlinks:active {
   text-decoration: underline; }
+
+.innerlinksfix {
+  /* These are technically the same, but use both */
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  -ms-word-break: break-all;
+  /* This is the dangerous one in WebKit, as it breaks things wherever */
+  word-break: break-all;
+  /* Instead use this non-standard one: */
+  word-break: break-word;
+  /* Adds a hyphen where the word breaks, if supported (No Blink) */
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto; }
 
 .img-responsive {
   display: block;
@@ -975,7 +1001,10 @@ textarea:focus, input:focus, select:focus {
     border-left: 4.8em solid #FF8C8C; }
 
   .formbackgroud {
-    padding: 1em 4.8em 3.6em 4.8em; } }
+    padding: 1em 4.8em 3.6em 4.8em; }
+
+  ul.innerlist li {
+    margin-bottom: 1em; } }
 @media screen and (max-width: 660px) {
   .footer_navigation {
     display: none; }
@@ -1038,7 +1067,10 @@ textarea:focus, input:focus, select:focus {
     font-size: 1.8em; }
 
   h5 {
-    font-size: 3.6em; } }
+    font-size: 3.6em; }
+
+  ul.innerlist li {
+    margin-bottom: 1em; } }
 @media screen and (max-width: 500px) {
   .textwrapper > p {
     font-size: 1.6em; }
@@ -1068,7 +1100,16 @@ textarea:focus, input:focus, select:focus {
     font-size: 2.4em; }
 
   ul.qa p {
-    font-size: 1.6em; } }
+    font-size: 1.6em; }
+
+  ul.innerlist li {
+    margin-bottom: 1em; }
+
+  ul.innerlist {
+    font-size: 1.6em; }
+
+  ul.innerlist li {
+    margin-bottom: 1em; } }
 @media screen and (max-width: 400px) {
   ul.speakers li {
     margin-bottom: 4.8em; } }
