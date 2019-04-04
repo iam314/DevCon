@@ -349,7 +349,9 @@ body {
   flex-direction: column; }
 
 .Site-content {
-  flex: 1; }
+  flex: 1; 
+  margin-right:1px;
+}
 
 section {
   padding-left: 8%;
