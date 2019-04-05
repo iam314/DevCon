@@ -2,6 +2,6 @@
 {
     public interface IEmailService
     {
-        void SendCorfimation(string emailTo);
+        void SendCorfimation(string emailTo, string pathToEmailTemplate);
     }
 }

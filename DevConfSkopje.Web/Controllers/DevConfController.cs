@@ -38,9 +38,11 @@ namespace DevConfSkopje.Web.Controllers
 
             try
             {
-                _emailService.SendCorfimation(model.Email);
+                var pathToTemplate = Server.MapPath(Url.Content("~/Content/EmailTemplate/index.html"));
+
+                _emailService.SendCorfimation(model.Email, pathToTemplate);
             }
-            catch(Exception)
+            catch(Exception ex)
             {
                 return RedirectToRoute("GlobalError");
             }

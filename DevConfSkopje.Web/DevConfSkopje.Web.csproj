@@ -216,13 +216,33 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\grid.css" />
-    <Content Include="Content\images\devcon_logo.png" />
-    <Content Include="Content\images\devcon_logo.svg" />
-    <Content Include="Content\images\devcon_poster copy.jpg" />
-    <Content Include="Content\images\devcon_poster.jpg" />
-    <Content Include="Content\images\favicon.ico" />
-    <Content Include="Content\images\logo.jpg" />
-    <Content Include="Content\images\logo_blck.png" />
+    <Content Include="Content\images\devcon_logo.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\images\devcon_logo.svg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\images\devcon_poster copy.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\images\devcon_poster.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\images\favicon.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\images\hero.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\images\logo.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\images\logo.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\images\logo_blck.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Content\images\partnerlogos\1.png" />
     <Content Include="Content\images\partnerlogos\2.png" />
     <Content Include="Content\images\speakers\1.jpg" />
@@ -231,6 +251,9 @@
     <Content Include="Content\images\speakers\4.jpg" />
     <Content Include="Content\main.css" />
     <Content Include="Content\normalize.css" />
+    <Content Include="Content\EmailTemplate\index.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
