@@ -37,9 +37,23 @@ namespace DevConfSkopje.Web
               new { controller = "Account", action = "Login" }
             );
 
+            routes.MapRoute("LogOff", "Account/LogOff", new { controller = "Account", action = "LogOff" });
+
+            routes.MapRoute(
+               "ExportRegistrations",
+               "Account/ExportRegistrations",
+               new { controller = "Account", action = "ExportRegistrations" }
+           );
+
+            routes.MapRoute(
+                "ConferenceRegistrations",
+                "Account/ConferenceRegistrations",
+                new { controller = "Account", action = "ConferenceRegistrations" }
+            );
+
             routes.MapRoute(
                 name: "Default",
-                url: "{controller}/{action}/{id}",
+                url: "{action}/{id}",
                 defaults: new { controller = "DevConf", action = "Index", id = UrlParameter.Optional }
             );
         }

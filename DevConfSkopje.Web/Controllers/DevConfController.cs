@@ -2,10 +2,8 @@
 using DevConfSkopje.DataModels;
 using System.Web.Mvc;
 using System.Linq;
-using CaptchaMvc.HtmlHelpers;
 using EmailServiceConf = DevConfSkopje.Services.EmailService;
 using System;
-using DevConfSkopje.Web.Helpers.ReCaptcha;
 
 namespace DevConfSkopje.Web.Controllers
 {
@@ -21,6 +19,8 @@ namespace DevConfSkopje.Web.Controllers
         [HttpPost]
         public ActionResult ConferenceRegistration(ConferenceRegistrationViewModel model)
         {
+            CheckForDublicatedEmails(model.Email);
+
             if (!ModelState.IsValid)
             {
                 return View("Registration", model);
@@ -115,6 +115,20 @@ namespace DevConfSkopje.Web.Controllers
 
             return View();
         }
+
+        public ActionResult CookiePolicy()
+        {
+            ViewBag.Title = "CookiePolicy";
+
+            return View();
+        }
+
+        public ActionResult CodeOfConduct()
+        {
+            ViewBag.Title = "Code of conduct";
+
+            return View();
+        }
         #endregion
 
         private ConferenceRegistration MapConfViewModelToDomainObj(ConferenceRegistrationViewModel model)
@@ -128,6 +142,16 @@ namespace DevConfSkopje.Web.Controllers
             domainObj.IsValid = true;
 
             return domainObj;
+        }
+
+        private void CheckForDublicatedEmails(string email)
+        {
+            bool isValid = _registrationsRepo.CheckRegistrationEmail(email);
+
+            if (isValid)
+            {
+                ModelState.AddModelError("Email", "You have already registered for the conference!");
+            }
         }
     }
 }
