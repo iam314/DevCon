@@ -40,7 +40,7 @@ namespace DevConfSkopje.Web.Controllers
             try
             {
                 var pathToTemplate = Server.MapPath(Url.Content("~/Content/EmailTemplate/index.html"));
-                var pathToImage = Server.MapPath(Url.Content("~/Content/images/hero.jpg"));
+                var pathToImage = Server.MapPath(Url.Content("~/Content/images/hero.jpeg"));
                 var pathToLogo = Server.MapPath(Url.Content("~/Content/images/logo.png"));
                 _emailService.SendCorfimation(model.Email, pathToTemplate, pathToImage, pathToLogo);
             }
