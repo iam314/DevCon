@@ -115,6 +115,20 @@ namespace DevConfSkopje.Web.Controllers
 
             return View();
         }
+
+        public ActionResult CookiePolicy()
+        {
+            ViewBag.Title = "CookiePolicy";
+
+            return View();
+        }
+
+        public ActionResult CodeOfConduct()
+        {
+            ViewBag.Title = "Code of conduct";
+
+            return View();
+        }
         #endregion
 
         private ConferenceRegistration MapConfViewModelToDomainObj(ConferenceRegistrationViewModel model)

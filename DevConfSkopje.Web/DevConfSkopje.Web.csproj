@@ -359,6 +359,8 @@
     <Content Include="Views\Shared\_SuccessfulRegistration.cshtml" />
     <Content Include="Views\Shared\NotFoundPage.cshtml" />
     <Content Include="Views\Shared\RegistrationsLimit.cshtml" />
+    <Content Include="Views\DevConf\CookiePolicy.cshtml" />
+    <Content Include="Views\DevConf\CodeOfConduct.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
