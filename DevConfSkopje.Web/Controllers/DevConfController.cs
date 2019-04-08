@@ -4,6 +4,7 @@ using System.Web.Mvc;
 using System.Linq;
 using EmailServiceConf = DevConfSkopje.Services.EmailService;
 using System;
+using DevConfSkopje.Web.Helpers.ReCaptcha;
 
 namespace DevConfSkopje.Web.Controllers
 {
@@ -19,19 +20,19 @@ namespace DevConfSkopje.Web.Controllers
         [HttpPost]
         public ActionResult ConferenceRegistration(ConferenceRegistrationViewModel model)
         {
-            CheckForDublicatedEmails(model.Email);
+           CheckForDublicatedEmails(model.Email);
 
             if (!ModelState.IsValid)
             {
                 return View("Registration", model);
             }
 
-            //string googleRecaptcha = Request.Form["g-recaptcha-response"];
-            //var validateRecaptcha = ReCaptchaHelper.VerifyGoogleReCaptcha(googleRecaptcha);
-            //if (validateRecaptcha == null || !validateRecaptcha.Success)
-            //{
-            //    return View("Registration", model);
-            //}
+            string googleRecaptcha = Request.Form["g-recaptcha-response"];
+            var validateRecaptcha = ReCaptchaHelper.VerifyGoogleReCaptcha(googleRecaptcha);
+            if (validateRecaptcha == null || !validateRecaptcha.Success)
+            {
+                return View("Registration", model);
+            }
 
             _emailService = new EmailServiceConf();
             _registrationsRepo.AddNewRegistration(MapConfViewModelToDomainObj(model));
@@ -40,9 +41,8 @@ namespace DevConfSkopje.Web.Controllers
             try
             {
                 var pathToTemplate = Server.MapPath(Url.Content("~/Content/EmailTemplate/index.html"));
-                var pathToImage = Server.MapPath(Url.Content("~/Content/images/hero.jpeg"));
-                var pathToLogo = Server.MapPath(Url.Content("~/Content/images/logo.png"));
-                _emailService.SendCorfimation(model.Email, pathToTemplate, pathToImage, pathToLogo);
+               
+                _emailService.SendCorfimation(model.Email, pathToTemplate);
             }
             catch (Exception ex)
             {
