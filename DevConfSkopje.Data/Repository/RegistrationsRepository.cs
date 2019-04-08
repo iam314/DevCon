@@ -27,6 +27,11 @@ namespace DevConfSkopje.Data.Repository
             return returnList;
         }
 
+        public bool CheckRegistrationEmail(string email)
+        {
+            return this.All().Any(x => x.Email == email);
+        }
+
         public void SaveDBChanges()
         {
             this.SaveChanges();

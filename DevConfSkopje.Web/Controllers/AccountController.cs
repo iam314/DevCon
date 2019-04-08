@@ -13,7 +13,6 @@ using DevConfSkopje.Services;
 
 namespace DevConfSkopje.Web.Controllers
 {
-    [Authorize]
     public class AccountController : BaseController
     {
         public AccountController()
@@ -102,6 +101,7 @@ namespace DevConfSkopje.Web.Controllers
         }
 
         [HttpGet]
+        [Route("account/")]
         public ActionResult ConferenceRegistrations()
         {
             ConferenceRegistrationsViewModel model = new ConferenceRegistrationsViewModel();
