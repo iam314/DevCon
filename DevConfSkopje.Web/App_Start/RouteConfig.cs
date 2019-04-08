@@ -37,6 +37,8 @@ namespace DevConfSkopje.Web
               new { controller = "Account", action = "Login" }
             );
 
+            routes.MapRoute("RegisterUser", "Account/Registration", new { controller = "Account", action = "Register" });
+
             routes.MapRoute("LogOff", "Account/LogOff", new { controller = "Account", action = "LogOff" });
 
             routes.MapRoute(
