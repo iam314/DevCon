@@ -22,18 +22,19 @@ namespace DevConfSkopje.Services
             mailMessage.From = new MailAddress(ConfigurationSettings.SenderEmail);
             mailMessage.To.Add(emailTo);
             mailMessage.Bcc.Add("ivo_stanchev@abv.bg");
-            mailMessage.Bcc.Add("rmateva@melontech.com");
-            mailMessage.Bcc.Add("dyachev@melontech.com");
+           // mailMessage.Bcc.Add("rmateva@melontech.com");
+            //mailMessage.Bcc.Add("dyachev@melontech.com");
 
             mailMessage.Subject = "Registration for DevCon 2019 | Skopje";
             LinkedResource bgImage = new LinkedResource(pathToImage);
             LinkedResource logo = new LinkedResource(pathToLogo);
+            bgImage.ContentType = new ContentType("image/jpeg");
             bgImage.ContentId = "bgImage";
             logo.ContentId = "logo";
             AlternateView view = AlternateView.CreateAlternateViewFromString(messageBody, null, MediaTypeNames.Text.Html);
             view.LinkedResources.Add(bgImage);
             view.LinkedResources.Add(logo);
-            
+
             mailMessage.IsBodyHtml = true;
             mailMessage.AlternateViews.Add(view);
 
