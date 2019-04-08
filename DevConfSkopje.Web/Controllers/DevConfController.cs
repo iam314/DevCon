@@ -5,6 +5,7 @@ using System.Linq;
 using CaptchaMvc.HtmlHelpers;
 using EmailServiceConf = DevConfSkopje.Services.EmailService;
 using System;
+using DevConfSkopje.Web.Helpers.ReCaptcha;
 
 namespace DevConfSkopje.Web.Controllers
 {
@@ -25,12 +26,12 @@ namespace DevConfSkopje.Web.Controllers
                 return View("Registration", model);
             }
 
-            if(!this.IsCaptchaValid(""))
-            {
-                ViewBag.ErrorCaptcha = "Invalid captcha !";
-
-                return View("Registration", model);
-            }
+            //string googleRecaptcha = Request.Form["g-recaptcha-response"];
+            //var validateRecaptcha = ReCaptchaHelper.VerifyGoogleReCaptcha(googleRecaptcha);
+            //if (validateRecaptcha == null || !validateRecaptcha.Success)
+            //{
+            //    return View("Registration", model);
+            //}
 
             _emailService = new EmailServiceConf();
             _registrationsRepo.AddNewRegistration(MapConfViewModelToDomainObj(model));
@@ -39,10 +40,11 @@ namespace DevConfSkopje.Web.Controllers
             try
             {
                 var pathToTemplate = Server.MapPath(Url.Content("~/Content/EmailTemplate/index.html"));
-
-                _emailService.SendCorfimation(model.Email, pathToTemplate);
+                var pathToImage = Server.MapPath(Url.Content("~/Content/images/hero.jpg"));
+                var pathToLogo = Server.MapPath(Url.Content("~/Content/images/logo.png"));
+                _emailService.SendCorfimation(model.Email, pathToTemplate, pathToImage, pathToLogo);
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 return RedirectToRoute("GlobalError");
             }

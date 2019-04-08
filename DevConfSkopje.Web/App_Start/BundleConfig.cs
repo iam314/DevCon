@@ -23,8 +23,6 @@ namespace DevConfSkopje.Web
                       "~/Scripts/bootstrap.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
-                      "~/Content/bootstrap.css",
-                      "~/Content/site.css",
                       "~/Content/normalize.css",
                       "~/Content/grid.css",
                       "~/Content/main.css"));

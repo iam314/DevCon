@@ -17,40 +17,36 @@
                 @Html.ValidationSummary(true, "", new { @class = "text-secondary" })
 
                 <div class="form-group">
-                    @Html.LabelFor(m => m.FirstName, new { @class = "col-md-2 control-label " })
                     <div class="col-md-10">
                         @Html.TextBoxFor(m => m.FirstName, new { @class = "First Name", @placeholder = "First Name*" })<br />
                         @Html.ValidationMessageFor(m => m.FirstName, "", new { @class = "text-secondary", @style = "font-weight:bold" })
                     </div>
                 </div>
                 <div class="form-group">
-                    @Html.LabelFor(m => m.LastName, new { @class = "col-md-2 control-label" })
                     <div class="col-md-10">
                         @Html.TextBoxFor(m => m.LastName, new { @class = "last Name", @placeholder = "Last Name*" })<br />
                         @Html.ValidationMessageFor(m => m.LastName, "", new { @class = "text-secondary", @style = "font-weight:bold" })
                     </div>
                 </div>
                 <div class="form-group">
-                    @Html.LabelFor(m => m.Email, new { @class = "col-md-2 control-label" })
                     <div class="col-md-10">
                         @Html.TextBoxFor(m => m.Email, new { @class = "mail", @placeholder = "Email*" })<br />
                         @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-secondary", @style = "font-weight:bold" })
                     </div>
                 </div>
                 <div class="form-group">
-                    @Html.LabelFor(m => m.PhoneNumber, new { @class = "col-md-2 control-label" })
                     <div class="col-md-10">
                         @Html.TextBoxFor(m => m.PhoneNumber, new { @class = "phone", @placeholder = "Phone" })<br />
                         @Html.ValidationMessageFor(m => m.PhoneNumber, "", new { @class = "text-secondary", @style = "font-weight:bold" })
                     </div>
                 </div>
 
-                <div class="form-group">
+                @*<div class="form-group">
                     <label class="col-md-2 control-label">Captcha</label>
                     <div class="col-md-10">
-                        @Html.Captcha("","Enter captcha",5)<p class="text-secondary">@ViewBag.ErrorCaptcha</p>
+                        <div class="g-recaptcha" data-sitekey="6Lfja5wUAAAAAD3RIHj-y8RbS5NuvLcth1SbLkzk" style="margin-bottom: 20px;"></div>
                     </div>
-                </div>
+                </div>*@
 
                 <div class="form-group">
                     <div class="col-md-offset-2 col-md-10">

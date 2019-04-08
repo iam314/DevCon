@@ -6,7 +6,7 @@
     <link rel="shortcut icon" href="~/Content/images/favicon.ico">
     <!-- fonts -->
     <link rel="stylesheet" href="https://use.typekit.net/miq1ref.css">
-
+   
     <title>DevCon | @ViewBag.Title </title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
@@ -18,13 +18,13 @@
             <nav class="container-fluid spaceoverwrite">
                 <div class="row">
                     <div class="col col--12-of-12">
-                        <a href="~/DevConf/" class="current-parent logo_blck"></a>
+                        <a href="~/DevConf" class="current-parent logo_blck"></a>
                         <span class="hamburgerblck hidedesktop" onclick="openNav()">☰</span>
                         <ul class="topnav">
-                            <li>@Html.ActionLink("About","About","DevConf",null,new { @class = "colorblack" })</li>
+                            <li>@Html.ActionLink("About", "About", "DevConf", null, new { @class = "colorblack" })</li>
                             <li>@Html.ActionLink("Speakers", "Speakers", "DevConf", null, new { @class = "colorblack" })</li>
                             <li>@Html.ActionLink("Schedule", "Schedule", "DevConf", null, new { @class = "colorblack" })</li>
-                            <li>@Html.ActionLink("Registration","Registration", "DevConf", null,new { @class = "colorblack" })</li>
+                            <li>@Html.ActionLink("Registration", "Registration", "DevConf", null, new { @class = "colorblack" })</li>
                             <li>@Html.ActionLink("FAQ", "Faq", "DevConf", null, new { @class = "colorblack" })</li>
                             <li>@Html.ActionLink("Contact", "Contact", "DevConf", null, new { @class = "colorblack" })</li>
                         </ul>
@@ -53,22 +53,23 @@
     </main>
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
+    <script src='https://www.google.com/recaptcha/api.js'></script>
     @RenderSection("scripts", required: false)
 
     <script type="text/javascript">
 
-            /* Set the width of the side navigation to 250px and the left margin of the page content to 250px */
-            function openNav() {
-                document.getElementById("mySidenav").style.width = "100%";
-                document.getElementById("main").style.marginLeft = "100px";
-            }
+        /* Set the width of the side navigation to 250px and the left margin of the page content to 250px */
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "100%";
+            document.getElementById("main").style.marginLeft = "100px";
+        }
 
-            /* Set the width of the side navigation to 0 and the left margin of the page content to 0 */
+        /* Set the width of the side navigation to 0 and the left margin of the page content to 0 */
 
-            function closeNav() {
-                document.getElementById("mySidenav").style.width = "0";
-                document.getElementById("main").style.marginLeft = "0";
-            }
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            document.getElementById("main").style.marginLeft = "0";
+        }
     </script>
 </body>
 </html>
