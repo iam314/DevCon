@@ -122,19 +122,12 @@ namespace DevConfSkopje.Web.Controllers
         {
             var registrations = _registrationsRepo.AllRegistrations().Where(x => x.IsValid == true).ToList();
 
-            string directoryPath = Server.MapPath("/Exports/");
-
-            if (!Directory.Exists("/Exports/"))
-            {
-                Directory.CreateDirectory(directoryPath);
-            }
-
             IExportRegistrationsService exportRegistrationsService 
                 = new ExportRegistrationsService();
 
-            string path = exportRegistrationsService.ExportToExcel(directoryPath, registrations);
+            var file = exportRegistrationsService.ExportToExcel(registrations);
 
-            return File(path, "multipart/form-data", Path.GetFileName(path));
+            return File(file, "multipart/form-data", "DevConfSkopje2019-Registrations.xlsx");
         }
 
 

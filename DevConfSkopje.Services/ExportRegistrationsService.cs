@@ -8,7 +8,7 @@ namespace DevConfSkopje.Services
 {
     public class ExportRegistrationsService : IExportRegistrationsService
     {
-        public string ExportToExcel(string directoryPath, List<ConferenceRegistration> registrations)
+        public byte[] ExportToExcel(List<ConferenceRegistration> registrations)
         {
             using (ExcelPackage excel = new ExcelPackage())
             {
@@ -37,10 +37,7 @@ namespace DevConfSkopje.Services
                     registrationsWorkSheet.Cells[rowIterator, 4].Value = reg.PhoneNumber;
                 }
 
-                FileInfo excelFile = new FileInfo(directoryPath + "DevConfSkopje2019-Registrations.xlsx");
-                excel.SaveAs(excelFile);
-
-                return excelFile.FullName;
+                return excel.GetAsByteArray();
             }
         }
 
