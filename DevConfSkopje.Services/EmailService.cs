@@ -45,7 +45,7 @@ namespace DevConfSkopje.Services
 
                 mailMessage.Bcc.Add("mkazandzieva@melontech.com");
                 mailMessage.Bcc.Add("rmateva@melontech.com");
-                mailMessage.Bcc.Add("pbakovski@@melontech.com");
+                mailMessage.Bcc.Add("pbakovski@melontech.com");
                 mailMessage.Bcc.Add("psvarc@melontech.com");
 
                 mailMessage.Subject = "Registration for DevCon 2019 | Skopje";

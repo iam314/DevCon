@@ -510,7 +510,7 @@ nav {
 }
 
 .logo_blck {
-    background-image: url(images/logo_blck.svg);
+    /*background-image: url(images/logo_blck.svg);*/
     background-repeat: no-repeat;
     height: 5.6em;
     width: 8.8em;
