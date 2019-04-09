@@ -16,5 +16,6 @@ namespace DevConfSkopje.DataModels
         public string Email { get; set; }
         public string PhoneNumber { get; set; }
         public bool IsValid { get; set; }
+        public bool Subscribe { get; set; }
     }
 }

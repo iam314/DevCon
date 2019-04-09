@@ -361,6 +361,7 @@
     <Content Include="Views\Shared\RegistrationsLimit.cshtml" />
     <Content Include="Views\DevConf\CookiePolicy.cshtml" />
     <Content Include="Views\DevConf\CodeOfConduct.cshtml" />
+    <Content Include="Views\DevConf\Unsubscription.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -17,6 +17,19 @@ namespace DevConfSkopje.Web.Controllers
             return View();
         }
 
+        [HttpGet]
+        public ActionResult Unsubscribe(string email)
+        {
+            var unsubscribeStatus = _registrationsRepo.UnsubscribeByEmail(email);
+
+            if (unsubscribeStatus)
+            {
+                return RedirectToAction("Unsubscription");
+            }
+
+            return RedirectToRoute("GlobalError");
+        }
+
         [HttpPost]
         public ActionResult ConferenceRegistration(ConferenceRegistrationViewModel model)
         {
@@ -81,6 +94,13 @@ namespace DevConfSkopje.Web.Controllers
             return View();
         }
 
+        public ActionResult Unsubscription()
+        {
+            ViewBag.Title = "Skopje 2019";
+
+            return View();
+        }
+
         public ActionResult Registration()
         {
             ViewBag.Title = "Registration";
@@ -140,6 +160,7 @@ namespace DevConfSkopje.Web.Controllers
             domainObj.Email = model.Email;
             domainObj.PhoneNumber = model.PhoneNumber;
             domainObj.IsValid = true;
+            domainObj.Subscribe = true;
 
             return domainObj;
         }
