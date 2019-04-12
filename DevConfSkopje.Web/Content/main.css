@@ -591,6 +591,7 @@ footer {
     margin-top: 6%;
 }
 
+
 .footer_navigation ul {
     list-style: none;
     display: flex;
@@ -658,11 +659,23 @@ ul.logos {
     margin-top: 9em;
 }
 
-    ul.logos li:last-child {
-        margin-right: 0;
+    ul.logos li a {
+        display: block;
+        margin: 0 auto 4.8em auto;
+        max-width: 180px;
     }
 
-.logos li > img {
+    ul.logos li img {
+        display: block;
+        margin: 0 auto 4.8em auto;
+        max-width: 180px;
+    }
+
+    ul.logos li a:hover {
+        opacity: .9;
+    }
+
+.logos li a > img {
     max-height: 180px;
     margin: 0 auto 4.8em auto;
 }
@@ -1244,7 +1257,12 @@ textarea {
         margin-top: 14%;
     }
 
-    .logos li > img {
+    .logos li a > img {
+        max-height: 140px;
+        margin: 0 auto 2.1em auto;
+    }
+
+    ul.logos li img {
         max-height: 140px;
         margin: 0 auto 2.1em auto;
     }
