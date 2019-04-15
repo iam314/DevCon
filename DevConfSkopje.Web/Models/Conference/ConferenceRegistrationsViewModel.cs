@@ -13,5 +13,12 @@ namespace DevConfSkopje.Web.Models.Conference
         }
 
         public List<ConferenceRegistrationViewModel> ConferenceRegistrations { get; set; }
+        public int TotalRegistrations
+        {
+            get
+            {
+                return this.ConferenceRegistrations.Count;
+            }
+        }  
     }
 }
