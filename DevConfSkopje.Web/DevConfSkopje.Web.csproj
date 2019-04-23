@@ -265,6 +265,9 @@
     <Content Include="Content\images\partnerlogos\foundry_logo.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Content\images\partnerlogos\h4_logo.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Content\images\partnerlogos\melon_logo.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
