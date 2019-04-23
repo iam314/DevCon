@@ -473,6 +473,37 @@ p {
   font-size: 1.6em;
 }
 
+.warning {
+  display: block;
+  padding: 8px 12px;
+  background-color: blue;
+  margin: 0 auto 8px auto;
+  max-width: 585px;
+  text-transform: uppercase;
+}
+
+.blink_me {
+  -webkit-animation: blinker .2s linear infinite;
+          animation: blinker .2s linear infinite;
+   // animation-duration: 1s;
+   -webkit-animation-delay: 2s;
+           animation-delay: 2s;
+   -webkit-animation-iteration-count: 7;
+           animation-iteration-count: 7;
+}
+
+@-webkit-keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
 .copyright {
   font-family: aktiv-grotesk, sans-serif;
   font-weight: 400;
