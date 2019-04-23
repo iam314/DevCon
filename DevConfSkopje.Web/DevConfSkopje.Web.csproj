@@ -283,6 +283,9 @@
     <Content Include="Content\images\speakers\4.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Content\images\speakers\Andrej_Trajchevski.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Content\images\speakers\Bojan_Bojinovski.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
