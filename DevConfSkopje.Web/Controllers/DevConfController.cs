@@ -12,7 +12,10 @@ namespace DevConfSkopje.Web.Controllers
     {
         public ActionResult Index()
         {
+            int registrationsLimit = _registrationsRepo.AllRegistrations().Where(x => x.IsValid == true).Count();
+
             ViewBag.Title = "Welcome";
+            ViewBag.Registrations = registrationsLimit;
 
             return View();
         }

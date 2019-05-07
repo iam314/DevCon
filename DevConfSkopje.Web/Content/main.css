@@ -935,6 +935,15 @@ p {
     text-transform: uppercase;
 }
 
+.warning2 {
+    display: block;
+    padding: 8px 12px;
+    background-color: #f20000;
+    margin: 0 auto 8px auto;
+    max-width: 215px;
+    text-transform: uppercase;
+}
+
 .copyright {
     font-family: aktiv-grotesk, sans-serif;
     font-weight: 400;
