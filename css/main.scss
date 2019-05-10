@@ -373,6 +373,17 @@ ul.innerlist li {
   margin-bottom: 1.2em;
 }
 
+ul.gallery {
+  list-style: none;
+  padding: 0;
+  margin-top: 0;
+}
+
+ul.gallery li {
+  display: inline-block;
+  margin-bottom: 2em;
+}
+
 h1 {
   font-family: aktiv-grotesk, sans-serif;
   font-weight: 700;
