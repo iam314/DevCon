@@ -384,6 +384,20 @@ ul.gallery li {
   margin-bottom: 2em;
 }
 
+.video-responsive{
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+}
+.video-responsive iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+}
+
 h1 {
   font-family: aktiv-grotesk, sans-serif;
   font-weight: 700;
