@@ -110,7 +110,7 @@ namespace DevConfSkopje.Web.Controllers
 
             int registrationsLimit = _registrationsRepo.AllRegistrations().Where(x => x.IsValid == true).Count();
 
-            if (registrationsLimit > 350)
+            if (registrationsLimit > 300)
             {
                 return View("RegistrationsLimit");
             }
