@@ -299,6 +299,9 @@
     <Content Include="Content\images\speakers\Kristijan_Ristovski.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Content\images\speakers\Melov.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Content\images\speakers\Rado_Gabrovski.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
