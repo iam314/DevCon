@@ -15,12 +15,21 @@
     <div class="row">
         <div class="col-lg-12">
             <div>
-                @Html.ActionLink("Export","ExportRegistrations","Account",null,new { @class="btn btn-success pull-right"})
+                @Html.ActionLink("Export", "ExportRegistrations", "Account", null, new { @class = "btn btn-success pull-right" })
+                @Html.ActionLink("Send feedback emails", "SendFeedbackEmails", "Account", null, new { @class = "btn btn-success pull-right", @style = "margin-right: 10px" })
             </div>
             <br />
+           
             <div class="scroll-in-mobile-container">
                 <div class="scroller">
                     <p>Registrations: @Model.TotalRegistrations</p>
+                    @if (TempData["Success"] != null && !string.IsNullOrEmpty((string)TempData["Success"]))
+                    {
+                        <br/>
+                        <div class="alert alert-success text-center">
+                            @Html.Raw(TempData["Success"])
+                        </div>
+                    }
                     <table class="table fixed-layout">
                         <thead class="thead">
                             <tr>
