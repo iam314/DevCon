@@ -8,8 +8,11 @@ using DevConfSkopje.Web.Models;
 using System.Linq;
 using DevConfSkopje.Web.Models.Conference;
 using System.IO;
+using EmailServiceConf = DevConfSkopje.Services.EmailService;
 using DevConfSkopje.Services.Contracts;
 using DevConfSkopje.Services;
+using System.Collections.Generic;
+using System;
 
 namespace DevConfSkopje.Web.Controllers
 {
@@ -130,6 +133,28 @@ namespace DevConfSkopje.Web.Controllers
             return File(file, "multipart/form-data", "DevConfSkopje2019-Registrations.xlsx");
         }
 
+        [HttpGet]
+        public ActionResult SendFeedbackEmails()
+        {
+            //List<string> emails = _registrationsRepo.AllRegistrations().Where(x => x.Subscribe == true).Select(registration => registration.Email).ToList();
+            List<string> testEmails = new List<string>() { "anangelov@melontech.com","speed345@abv.bg"};
+            _emailService = new EmailServiceConf();
+
+            var pathToTemplate = Server.MapPath(Url.Content("~/Content/EmailTemplate/thankyou.html"));
+
+            try
+            {
+                _emailService.SendFeedbackMessages(testEmails, pathToTemplate);
+            }
+            catch (Exception ex)
+            {
+                return RedirectToRoute("GlobalError");
+            }
+
+            TempData["Success"] = "Feedback emails are sent successfully !";
+
+            return RedirectToAction("ConferenceRegistrations");
+        }
 
         protected override void Dispose(bool disposing)
         {

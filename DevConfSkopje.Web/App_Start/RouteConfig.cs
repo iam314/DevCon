@@ -45,7 +45,13 @@ namespace DevConfSkopje.Web
                "ExportRegistrations",
                "Account/ExportRegistrations",
                new { controller = "Account", action = "ExportRegistrations" }
-           );
+            );
+
+            routes.MapRoute(
+              "SendFeedbackEmails",
+              "Account/SendFeedbackEmails",
+              new { controller = "Account", action = "SendFeedbackEmails" }
+            );
 
             routes.MapRoute(
                 "ConferenceRegistrations",
