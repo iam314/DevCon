@@ -25,11 +25,11 @@ namespace DevConfSkopje.Web
              new { controller = "Base", action = "GlobalError" }
             );
             
-            routes.MapRoute(
-              "RegSuccess",
-              "Success",
-              new { controller = "Base", action = "SuccessRegistration"}
-              );
+            //routes.MapRoute(
+            //  "RegSuccess",
+            //  "Success",
+            //  new { controller = "Base", action = "SuccessRegistration"}
+            //  );
 
             routes.MapRoute(
               "Admin",
