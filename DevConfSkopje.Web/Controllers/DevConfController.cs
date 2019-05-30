@@ -33,40 +33,40 @@ namespace DevConfSkopje.Web.Controllers
             return RedirectToRoute("GlobalError");
         }
 
-        [HttpPost]
-        public ActionResult ConferenceRegistration(ConferenceRegistrationViewModel model)
-        {
-           CheckForDublicatedEmails(model.Email);
+        //[HttpPost]
+        //public ActionResult ConferenceRegistration(ConferenceRegistrationViewModel model)
+        //{
+        //   CheckForDublicatedEmails(model.Email);
 
-            if (!ModelState.IsValid)
-            {
-                return View("Registration", model);
-            }
+        //    if (!ModelState.IsValid)
+        //    {
+        //        return View("Registration", model);
+        //    }
 
-            string googleRecaptcha = Request.Form["g-recaptcha-response"];
-            var validateRecaptcha = ReCaptchaHelper.VerifyGoogleReCaptcha(googleRecaptcha);
-            if (validateRecaptcha == null || !validateRecaptcha.Success)
-            {
-                return View("Registration", model);
-            }
+        //    string googleRecaptcha = Request.Form["g-recaptcha-response"];
+        //    var validateRecaptcha = ReCaptchaHelper.VerifyGoogleReCaptcha(googleRecaptcha);
+        //    if (validateRecaptcha == null || !validateRecaptcha.Success)
+        //    {
+        //        return View("Registration", model);
+        //    }
 
-            _emailService = new EmailServiceConf();
-            _registrationsRepo.AddNewRegistration(MapConfViewModelToDomainObj(model));
-            _registrationsRepo.SaveDBChanges();
+        //    _emailService = new EmailServiceConf();
+        //    _registrationsRepo.AddNewRegistration(MapConfViewModelToDomainObj(model));
+        //    _registrationsRepo.SaveDBChanges();
 
-            try
-            {
-                var pathToTemplate = Server.MapPath(Url.Content("~/Content/EmailTemplate/index.html"));
+        //    try
+        //    {
+        //        var pathToTemplate = Server.MapPath(Url.Content("~/Content/EmailTemplate/index.html"));
                
-                _emailService.SendCorfimation(model.Email, pathToTemplate);
-            }
-            catch (Exception ex)
-            {
-                return RedirectToRoute("GlobalError");
-            }
+        //        _emailService.SendCorfimation(model.Email, pathToTemplate);
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        return RedirectToRoute("GlobalError");
+        //    }
 
-            return RedirectToRoute("RegSuccess");
-        }
+        //    return RedirectToRoute("RegSuccess");
+        //}
 
         #region STATIC PAGES
         public ActionResult Faq()
@@ -90,12 +90,12 @@ namespace DevConfSkopje.Web.Controllers
             return View();
         }
 
-        public ActionResult Schedule()
-        {
-            ViewBag.Title = "Schedule";
+        //public ActionResult Schedule()
+        //{
+        //    ViewBag.Title = "Schedule";
 
-            return View();
-        }
+        //    return View();
+        //}
 
         public ActionResult Unsubscription()
         {
@@ -104,19 +104,33 @@ namespace DevConfSkopje.Web.Controllers
             return View();
         }
 
-        public ActionResult Registration()
+        public ActionResult Gallery()
         {
-            ViewBag.Title = "Registration";
-
-            int registrationsLimit = _registrationsRepo.AllRegistrations().Where(x => x.IsValid == true).Count();
-
-            if (registrationsLimit > 300)
-            {
-                return View("RegistrationsLimit");
-            }
+            ViewBag.Title = "Gallery";
 
             return View();
         }
+
+        public ActionResult Lectures()
+        {
+            ViewBag.Title = "Lectures";
+
+            return View();
+        }
+
+        //public ActionResult Registration()
+        //{
+        //    ViewBag.Title = "Registration";
+
+        //    int registrationsLimit = _registrationsRepo.AllRegistrations().Where(x => x.IsValid == true).Count();
+
+        //    if (registrationsLimit > 300)
+        //    {
+        //        return View("RegistrationsLimit");
+        //    }
+
+        //    return View();
+        //}
 
         public ActionResult Contact()
         {

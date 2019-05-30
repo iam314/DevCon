@@ -12,8 +12,10 @@
                 <ul class="topnav">
                     <li>@Html.ActionLink("About", "About", "DevConf", null, null)</li>
                     <li>@Html.ActionLink("Speakers", "Speakers", "DevConf", null, null)</li>
-                    <li>@Html.ActionLink("Schedule", "Schedule", "DevConf", null, null)</li>
-                    <li>@Html.ActionLink("Registration", "Registration", "DevConf", null, null)</li>
+                    @*<li>@Html.ActionLink("Schedule", "Schedule", "DevConf", null, null)</li>
+                     <li>@Html.ActionLink("Registration", "Registration", "DevConf", null, null)</li>*@
+                    <li>@Html.ActionLink("Lectures", "Lectures", "DevConf", null,null)</li>
+                    <li>@Html.ActionLink("Gallery", "Gallery", "DevConf", null,null)</li>
                     <li>@Html.ActionLink("FAQ", "Faq", "DevConf", null, null)</li>
                     <li>@Html.ActionLink("Contact", "Contact", "DevConf", null, null)</li>
                 </ul>
@@ -24,8 +26,10 @@
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
             @Html.ActionLink("About", "About", "DevConf", null, new { @class = "colorblack" })
             @Html.ActionLink("Speakers", "Speakers", "DevConf", null, new { @class = "colorblack" })
-            @Html.ActionLink("Schedule", "Schedule", "DevConf", null, new { @class = "colorblack" })
-            @Html.ActionLink("Registration", "Registration", "DevConf", null, new { @class = "colorblack" })
+            @*@Html.ActionLink("Schedule", "Schedule", "DevConf", null, new { @class = "colorblack" })
+            @Html.ActionLink("Registration", "Registration", "DevConf", null, new { @class = "colorblack" })*@
+            @Html.ActionLink("Lectures", "Lectures", "DevConf", null, new { @class = "colorblack" })
+            @Html.ActionLink("Gallery", "Gallery", "DevConf", null, new { @class = "colorblack" })
             @Html.ActionLink("FAQ", "Faq", "DevConf", null, new { @class = "colorblack" })
             @Html.ActionLink("Contact", "Contact", "DevConf", null, new { @class = "colorblack" })
         </div>
@@ -38,7 +42,7 @@
                 <img class="devconlogo" src="@Url.Content("~/Content/images/devcon_logo.png")" alt="Devcon logo">
                 <h2 class="white center">May 11th, 2019 at City Hall<br>Skopje, Macedonia</h2>
 
-                    <p class="white center warning2">No more seats left.</p>
+                    @*<p class="white center warning2">No more seats left.</p>*@
                 
                 <h1 class="white center">Meet the faces behind the code</h1>
                 <p class="white center subtext">Web and mobile community in-depth talks and hands-on workshops enhancing the coding craft.</p>
