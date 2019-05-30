@@ -136,15 +136,15 @@ namespace DevConfSkopje.Web.Controllers
         [HttpGet]
         public ActionResult SendFeedbackEmails()
         {
-            //List<string> emails = _registrationsRepo.AllRegistrations().Where(x => x.Subscribe == true).Select(registration => registration.Email).ToList();
-            List<string> testEmails = new List<string>() { "anangelov@melontech.com","speed345@abv.bg"};
+            List<string> emails = _registrationsRepo.AllRegistrations().Where(x => x.Subscribe == true).Select(registration => registration.Email).ToList();
+           // List<string> testEmails = new List<string>() { "istanchev@melontech.com","x3m.fall3n@gmail.com"};
             _emailService = new EmailServiceConf();
 
             var pathToTemplate = Server.MapPath(Url.Content("~/Content/EmailTemplate/thankyou.html"));
 
             try
             {
-                _emailService.SendFeedbackMessages(testEmails, pathToTemplate);
+                _emailService.SendFeedbackMessages(emails, pathToTemplate);
             }
             catch (Exception ex)
             {
