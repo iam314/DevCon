@@ -2,30 +2,6 @@
 <html lang="en">
 
 <head>
-	
-        <!-- Hammer reload -->
-          <script>
-            setInterval(function(){
-              try {
-                if(typeof ws != 'undefined' && ws.readyState == 1){return true;}
-                ws = new WebSocket('ws://'+(location.host || 'localhost').split(':')[0]+':35353')
-                ws.onopen = function(){ws.onclose = function(){document.location.reload()}}
-                window.onbeforeunload = function() { ws = null }
-                ws.onmessage = function(){
-                  var links = document.getElementsByTagName('link');
-                    for (var i = 0; i < links.length;i++) {
-                    var link = links[i];
-                    if (link.rel === 'stylesheet' && !link.href.match(/typekit/)) {
-                      href = link.href.replace(/((&|\?)hammer=)[^&]+/,'');
-                      link.href = href + (href.indexOf('?')>=0?'&':'?') + 'hammer='+(new Date().valueOf());
-                    }
-                  }
-                }
-              }catch(e){}
-            }, 1000)
-          </script>
-        <!-- /Hammer reload -->
-      
 	<meta charset="utf-8">
 	<!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
 	<title>
@@ -37,25 +13,28 @@
 	<!-- fonts -->
 	<link rel="stylesheet" href="https://use.typekit.net/miq1ref.css">
 	<!-- Le styles -->
-	<link href="css/normalize.css" rel="stylesheet">
+	<link href="css/normalize-min.css" rel="stylesheet">
 	<link href="css/main.css" rel="stylesheet">
 </head>
 
 <body class="Site">
 	<main class="Site-content">
-<section>
+
+<div class="wrapper">
   <nav class="container-fluid spaceoverwrite">
     <div class="row">
       <div class="col col--12-of-12">
-        <a href="index.html" class="current-parent logo_blck"></a>
+        <a href="index.html" class="logo_blck"></a>
         <span class="hamburgerblck hidedesktop" onclick="openNav()">☰</span>
         <ul class="topnav">
-          <li><a class="colorblack" href="about.html">About</a></li>
-          <li><a class="colorblack" href="speakers.html">Speakers</a></li>
-          <li><a class="colorblack" href="schedule.html">Schedule</a></li>
-          <li class='current'><a class="current colorblack" href="registration.html">Registration</a></li>
-          <li><a class="colorblack" href="faq.html">FAQ</a></li>
-          <li><a class="colorblack" href="contact.html">Contact</a></li>
+          <li><add class=""><a class="colorblack" href="about.html">About</a></li>
+          <li><add class=""><a class="colorblack" href="speakers.html">Speakers</a></li>
+          <li><add class=""><a class="colorblack" href="schedule.html">Schedule</a></li>
+          <li><add class="current"><a class="colorblack" href="registration.html">Registration</a></li>
+          <li><add class=""><a class="colorblack" href="talks.html">Talks</a></li>
+          <li><add class=""><a class="colorblack" href="gallery.html">Gallery</a></li>
+          <li><add class=""><a class="colorblack" href="faq.html">FAQ</a></li>
+          <li><add class=""><a class="colorblack" href="contact.html">Contact</a></li>
         </ul>
       </div>
     </div>
@@ -65,15 +44,17 @@
       <a href="about.html">About</a>
       <a href="speakers.html">Speakers</a>
       <a href="schedule.html">Schedule</a>
-      <a class='current' href="registration.html">Registration</a>
+      <a href="registration.html">Registration</a>
+      <a href="talks.html">Talks</a>
+      <a href="gallery.html">Gallery</a>
       <a href="faq.html">FAQ</a>
       <a href="contact.html">Contact</a>
     </div>
 
   </nav>
-</section>
+</div>
 
-<section class="container-fluid">
+<div class="container-fluid wrapper">
   <div class="row">
     <div class="col col--12-of-12">
       <div class="formbackgroud">
@@ -96,26 +77,28 @@
 
     </div>
   </div>
-</section>
+</div>
 
 </main>
-<section>
+<div class="wrapper">
 	<footer class="container-fluid">
 		<div class="row">
 			<div class="col col--12-of-12">
-				<a href="index.html" class="current-parent footerlogo"></a>
+				<a href="index.html" class="footerlogo"></a>
 			</div>
 		</div>
 		<div class="row">
 			<div class="col col--9-of-12 col col--centered">
 				<div class="footer_navigation">
 					<ul>
-						<li><a href="about.html">About</a></li>
-						<li><a href="speakers.html">Speakers</a></li>
-						<li><a href="schedule.html">Schedule</a></li>
-						<li class='current'><a class='current' href="registration.html">Registration</a></li>
-						<li><a href="faq.html">FAQ</a></li>
-						<li><a href="contact.html">Contact</a></li>
+						<li><add class=""><a href="about.html">About</a></li>
+						<li><add class=""><a href="speakers.html">Speakers</a></li>
+						<li><add class=""><a href="schedule.html">Schedule</a></li>
+						<li><add class="current_footer"><a href="registration.html">Registration</a></li>
+						<li><add class=""><a href="talks.html">Talks</a></li>
+						<li><add class=""><a href="gallery.html">Gallery</a></li>
+						<li><add class=""><a href="faq.html">FAQ</a></li>
+						<li><add class=""><a href="contact.html">Contact</a></li>
 					</ul>
 				</div>
 			</div>
@@ -155,13 +138,16 @@
 		</div>
 		<div class="row">
 			<div class="col col--12-of-12">
-				<p class="copyright">© copyright 2019 DevCon</p>
+				<p class="copyright">© copyright 2020 DevCon</p>
 			</div>
 		</div>
 	</footer>
-</section>
+</div>
 
-<!-- Photo by Lucas Benjamin on Unsplash -->
+<div class="medium-zoom-overlay" style="background-color: #fff; display: none;"></div>
+<div class="container-fluid">
+	<img class="zoomed-img img-responsive" src="" alt="">
+</div>
 
 <script type="text/javascript">
 	/* Set the width of the side navigation to 250px and the left margin of the page content to 250px */
@@ -175,7 +161,98 @@
 		document.getElementById("mySidenav").style.width = "0";
 		document.getElementById("main").style.marginLeft = "0";
 	}
+
+	function hideZoomedImage(zoomedImgEl, overlayEl){
+		document.body.classList.remove('medium-zoom--opened');
+		overlayEl.style.display = 'none';
+		zoomedImgEl.style.display = 'none';
+	}
+
+	function onWindowScroll(zoomedImgEl, overlayEl){
+		console.log(zoomedImg.style.display)
+		if(zoomedImg.style.display === 'block'){
+			hideZoomedImage(zoomedImgEl, overlayEl);
+		} else{
+			return;
+		}
+	}
+
+	const galleryImgContainer = document.querySelector('.gallery');
+	const zoomedImg = document.querySelector('.zoomed-img');
+	const overlayEl = document.querySelector('.medium-zoom-overlay');
+
+	// TODO: Close zoomed img on window scroll.
+	// window.addEventListener('scroll', onWindowScroll(zoomedImg, overlayEl));
+
+	zoomedImg.addEventListener('click', () => {
+		hideZoomedImage(zoomedImg, overlayEl);
+	});
+
+	overlayEl.addEventListener('click', () => {
+		hideZoomedImage(zoomedImg, overlayEl);
+	});
+
+	function setZoomedImageStyle(zoomedImgEl, styles){
+			// 3 is a magical number test it
+			// Styles for the image when zoomed
+			Object.assign(zoomedImg.style, {
+					position: 'absolute',
+			    top: `${windowScrollPosition + Math.round(window.innerHeight / 3)}px`,
+					left: '35%',
+			    width: '35%',
+			    maxHeight: '260px',
+					display: 'block',
+					transform: 'scale(1.41004) translate3d(0.00554061px, 16.511px, 0px)'
+			});
+	}
+
+	function showZoomedImage(zoomedImgEl, overlayEl){
+		const windowScrollPosition = document.documentElement.scrollTop;
+		const imgEl = event.target;
+		const imgSrc = imgEl.src;
+		const {top} = imgEl.getBoundingClientRect();
+
+		overlayEl.style.display = 'block';
+		zoomedImg.src = imgSrc;
+		if(window.innerWidth < 768){
+			setZoomedImageStyle(zoomedImg, {});
+
+		} else{
+			setZoomedImageStyle(zoomedImg, {});
+
+		}
+
+		document.body.classList.add('medium-zoom--opened');
+	}
+
+	galleryImgContainer.addEventListener('click', (event) => {
+		const windowScrollPosition = document.documentElement.scrollTop;
+		const imgEl = event.target;
+		const imgSrc = imgEl.src;
+		const {top} = imgEl.getBoundingClientRect();
+
+		overlayEl.style.display = 'block';
+		zoomedImg.src = imgSrc;
+
+		// 3 is a magical number test it
+		// Styles for the image when zoomed
+		Object.assign(zoomedImg.style, {
+				position: 'absolute',
+		    top: `${windowScrollPosition + Math.round(window.innerHeight / 3)}px`,
+				left: '35%',
+		    width: '35%',
+		    maxHeight: '260px',
+				display: 'block',
+				transform: 'scale(1.41004) translate3d(0.00554061px, 16.511px, 0px)'
+		});
+
+		document.body.classList.add('medium-zoom--opened');
+	});
+
+
 </script>
+
 </body>
 
 </html>
+

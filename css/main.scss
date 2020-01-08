@@ -11,8 +11,59 @@ body {
   background-color: white;
 }
 
+// Zoom effect
+.medium-zoom-overlay{
+    position:fixed;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    opacity:0;
+    transition:opacity .3s;
+    will-change:opacity;
+    z-index:300
+}
+.medium-zoom--opened {
+  .medium-zoom-overlay{
+    cursor:zoom-out;
+    opacity:1;
+  }
+
+  .zoomed-img {
+    cursor:zoom-out;
+    z-index: 500;
+  }
+
+}
+.medium-zoom-image{
+    cursor:pointer;
+    cursor:zoom-in;
+    transition:transform .8s cubic-bezier(.215,.61,.355,1),opacity .5s!important
+}
+.medium-zoom-image--hidden{
+    visibility:hidden;
+    z-index:300
+}
+.medium-zoom-image--opened{
+    position:relative;
+    cursor:pointer;
+    cursor:zoom-out;
+    will-change:transform;
+    z-index:300
+}
+
+.img-container img {
+  transition:transform .8s cubic-bezier(.215,.61,.355,1),opacity .5s!important
+}
+
+.img-container:hover img {
+  // transition: transform 1.5s cubic-bezier(.19,1,.22,1)!important;
+  // transform: perspective(1500px) translateZ(50px);
+  cursor: zoom-in;
+}
+
 ::selection {
-    background: $color-red;
+    background: $color-blue;
     color: white;
     text-shadow: none;
  }
@@ -27,17 +78,25 @@ body {
    flex: 1;
  }
 
- section {
+ .wrapper {
    padding-left: 8%;
    padding-right: 8%
  }
 
  .poster_bg {
-   background: url(img/devcon_poster.jpg);
+   background: url(../img/devcon_poster.jpg);
    background-position: center;
    background-size: cover;
    height: 100vh;
  }
+
+.about_image {
+  background: url(../img/gallery/2019/DSC_002.JPG);
+  background-position: center;
+  background-size: cover;
+  height: 50vh;
+}
+
 
 nav {
   margin-bottom: 8%;
@@ -59,7 +118,7 @@ nav {
 }
 
 .logo_blck {
-	background-image: url(img/logo_blck.svg);
+	background-image: url(../img/logo_blck.svg);
 	background-repeat: no-repeat;
 	height: 5.6em;
 	width: 8.8em;
@@ -76,19 +135,19 @@ nav ul {
 nav ul li a {
   font-family: aktiv-grotesk, sans-serif;
 	font-weight: 700;
-	font-size: 2.1em;
+	font-size: 1.8em;
 	color: $color-white;
   text-decoration: none;
 }
 
 nav ul li a:hover {
-	color: $color-red;
+	// color: $color-red;
 	padding-bottom: 0.2em;
 	border-bottom: 0.2em solid;
 	text-decoration: none;
 }
 
-nav li.current a {
+.current a {
 	padding-bottom: 0.2em;
 	border-bottom: 0.2em solid;
 	text-decoration: none;
@@ -97,7 +156,8 @@ nav li.current a {
 .devconlogo {
   display: flex;
   margin: 0 auto 0 auto;
-  height: 14em;
+  height: 10em;
+  // height: 14em;
   width: 18em;
 }
 
@@ -117,14 +177,14 @@ nav li.current a {
   display: block;
   margin: 0 auto;
   text-align: center;
-  -webkit-box-shadow: 0px 12px 21px -6px rgba(0,38,49,0.8);
-  -moz-box-shadow: 0px 12px 21px -6px rgba(0,38,49,0.8);
-  box-shadow: 0px 12px 21px -6px rgba(0,38,49,0.8);
+  // -webkit-box-shadow: 0px 12px 21px -6px rgba(0,38,49,0.8);
+  // -moz-box-shadow: 0px 12px 21px -6px rgba(0,38,49,0.8);
+  // box-shadow: 0px 12px 21px -6px rgba(0,38,49,0.8);
   transition: all 300ms ease-in-out;
 }
 
 .ctabutton:hover {
-background-color: darken( $color-red, 20%);
+  background-color: darken( $color-red, 15%);
 }
 
 .footerlogo {
@@ -155,7 +215,7 @@ footer {
 .footer_navigation ul li a {
   font-family: aktiv-grotesk, sans-serif;
 	font-weight: 700;
-	font-size: 1.8em;
+	font-size: 1.6em;
 	color: $color-black;
   text-decoration: none;
 }
@@ -167,7 +227,7 @@ footer {
 	border-top: 0.2em solid;
 }
 
-.footer_navigation li.current a {
+.current_footer a{
 	color: $color-black;
 	padding-top: 0.2em;
 	border-top: 0.2em solid;
@@ -227,13 +287,17 @@ ul.logos li a:hover {
   margin: 0 auto 4.8em auto;
 }
 
-
-ul.speakers {
+ul.speakers, ul.talks {
   padding-left: 0;
   list-style: none;
 }
-ul.speakers li {
-  margin-bottom: 9em;
+
+ul.talks li {
+  margin-bottom: 4em;
+}
+
+ul.speakers li{
+  margin-bottom: 12em;
 }
 
 ul.speakers p {
@@ -289,6 +353,9 @@ ul.program {
 
 ul.program li {
   margin-bottom: 4.8em;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 38em;
 }
 
 ul.program li > h3, p {
@@ -371,6 +438,34 @@ ul.innerlist {
 
 ul.innerlist li {
   margin-bottom: 1.2em;
+}
+
+ul.gallery {
+  list-style: none;
+  padding: 0;
+  margin-top: 0;
+}
+
+ul.gallery li {
+  display: inline-block;
+  margin-bottom: 2em;
+}
+
+.video-responsive{
+  overflow:hidden;
+  padding-bottom:56.25%;
+  position:relative;
+  height:0;
+}
+.video-responsive iframe{
+  left:0;
+  top:0;
+  height:100%;
+  width:100%;
+  position:absolute;
+}
+.video-space {
+  margin-bottom: 10%;
 }
 
 h1 {
@@ -522,6 +617,15 @@ p {
   margin-bottom: 1.2em;
 }
 
+.text_undercolor {
+  background-color: #fff;
+  max-width: 65em;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 4.6em;
+  margin-top: 20em;
+}
+
 .textwrapper {
   padding: 0 3.6em;
   border-left: 3.6em solid $color-red;
@@ -665,6 +769,20 @@ background-color: darken( $color-red, 20%);
   display: inline-block;
 }
 
+.talks_title {
+  margin: 0.5em 0 0 0;
+}
+
+.talks_link {
+  display: inline-block;
+  color: #FF8C8C;
+  font-family: aktiv-grotesk, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.8em;
+  text-decoration: none;
+}
+
 .hamburger {
   cursor: pointer;
   font-size: 2.8em;
@@ -692,7 +810,7 @@ background-color: darken( $color-red, 20%);
   /* Stay on top */
   top: 0;
   right: 0;
-  background-color: $color-blue;
+  background-color: $color-red;
   /* Black*/
   overflow-x: hidden;
   /* Disable horizontal scroll */
@@ -712,7 +830,7 @@ background-color: darken( $color-red, 20%);
   font-size: 2.1em;
   padding: 8px 8px 10px 32px;
   text-decoration: none;
-  color: $color-white;
+  color: $color-black;
   display: block;
   text-align: center;
   transition: 0.3s; }
